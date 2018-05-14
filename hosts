@@ -1,0 +1,17 @@
+[nginx-lb]
+172.16.2.250
+
+[nginx-servers]
+172.16.2.251
+172.16.2.252
+172.16.2.253
+
+[all:vars]
+ansible_connection=ssh
+ansible_ssh_user=johni
+ansible_ssh_pass=Ol1v3rD0g!
+ansible_become=true
+ansible_become_user=root
+ansible_become_pass=Ol1v3rD0g!
+#rhel7cis_rule_1_3_1=false
+rhel7cis_firewall_services=["ssh", "dhcpv6-client", "http", "https"]
